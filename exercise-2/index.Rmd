@@ -1,0 +1,23 @@
+---
+title: "m15 exercise-2"
+output: html_document
+---
+
+```{r setup, echo=FALSE, include=FALSE}
+library(plotly)
+titanic <- data(Titanic)
+
+ann <- list(x = 'x values', y = 'y values', z = 'z values')
+
+test <- plot_ly(
+  type = 'scatter3d',
+  x = c(10, 11, 12, 13),
+  y = c(10, 2, 8, 5),
+  z = c(3, 6, 9, 12),
+  mode = 'markers'
+  ) %>% 
+    layout(title = '3D Scatter Plot Test',
+           annotations = ann)
+```
+
+`r test`
